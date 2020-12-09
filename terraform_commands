@@ -1,0 +1,24 @@
+# For new initization download terraform from terrafrom.io site
+# for linux 64bit
+https://releases.hashicorp.com/terraform/0.14.2/terraform_0.14.2_linux_amd64.zip  
+# for windows 64bit
+https://releases.hashicorp.com/terraform/0.14.2/terraform_0.14.2_windows_amd64.zip
+
+# For install
+
+$ wget https://releases.hashicorp.com/terraform/0.14.2/terraform_0.14.2_linux_amd64.zip
+
+$ unzip terraform_0.14.2_linux_amd64.zip
+
+#make a folder downloads and move the file into it
+
+$mkdir downloads
+$mv downloads/terraform /usr/local/bin/
+$ terraform -help
+
+# for autocomplete tab
+$ terraform -install-autocomplete
+
+# intigrate in an directory/floder use init command
+$ terraform init
+
