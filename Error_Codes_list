@@ -1,0 +1,137 @@
+Error Code list
+
+1xx: Informational
+2xx: Success
+3xx: Redirection
+4xx: Client Error
+5xx: Server Error
+
+
+100 Continue
+101 Switching Protocols
+102 Processing
+103 Early Hints
+
+2xx success
+200 OK
+201 Created
+202 Accepted
+203 Non-Authoritative Information
+204 No Content
+205 Reset Content
+206 Partial Content
+207 Multi-Status 
+208 Already Reported
+218 This is fine (Apache Web Server)
+226 IM Used
+
+3xx redirection
+300 Multiple Choices
+301 Moved Permanently
+302 Found (Previously "Moved temporarily")
+303 See Other (since HTTP/1.1)
+304 Not Modified 
+305 Use Proxy 
+306 Switch Proxy
+307 Temporary Redirect
+308 Permanent Redirect 
+
+
+
+400 Bad Request
+401 unauthorized
+402 Payment Required
+403 Fordidden
+404 Not Found
+405 Method Not Allowed
+406 Not Acceptable
+407 Proxy Authentication Required
+408 Request Timeout
+409 Conflict
+410 Gone
+
+411 Length Required
+412 Precondition Failed
+413 Payload Too Large
+414 URI Too Long
+415 Unsupported Media Type
+416 Range Not Satisfiable
+417 Expectation Failed
+418 I'm a teapot
+419 Page Expired (Laravel Framework)
+420 Enhance Your Calm (Twitter)
+-420 Method Failure (Spring Framework)
+
+421 Misdirected Request
+422 Unprocessable Entity
+423 Locked
+424 Failed Dependency
+425 Too Early 
+426 Upgrade Required
+428 Precondition Required
+429 Too Many Requests 
+430 Request Header Fields Too Large (Shopify)
+
+431 Request Header Fields Too Large
+440 Login Time-out
+
+444 No Response
+449 Retry With
+450 Blocked by Windows Parental Controls (Microsoft)
+
+451 Unavailable For Legal Reasons 
+-451 Redirect
+460 Client closed the connection with the load balancer
+
+463 The load balancer received an X-Forwarded-For request header with more than 30 IP addresses
+
+494 Request header too large
+495 SSL Certificate Error
+496 SSL Certificate Required
+497 HTTP Request Sent to HTTPS Port
+498 Invalid Token (Esri)
+499 Token Required (Esri)
+-499 Client Closed Request
+
+5xx server errors
+
+500 Internal server error
+501 Not Implemented
+502 Bad Gateway
+503 Service Unavailable
+504 Gateway Timeout
+505 HTTP Version Not Supported
+506 Variant Also Negotiates
+507 Insufficient Storage
+508 Loop Detected
+509 Bandwidth Limit Exceeded 
+510 Not Extended
+
+511 Network Authentication Required
+520 Web Server Returned an Unknown Error
+
+521 Web Server Is Down
+522 Connection Timed Out
+523 Origin Is Unreachable
+524 A Timeout Occurred
+525 SSL Handshake Failed
+526 Invalid SSL Certificate
+527 Railgun Error
+529 Site is overloaded
+530 Site is frozen
+
+598 (Informal convention) Network read timeout error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
