@@ -1,0 +1,64 @@
+# docker commands #
+
+#docker ps
+
+#docker volume
+
+#docker volume ls
+
+#docker commands -a
+
+docker volume prune
+
+docker volume rm (name of volume)
+
+docker volume create (name of volume)
+
+docker exec -it (name of container) bash
+
+
+docker run -d --name (name of container) -p 8000:80 --mount source=(name of volume),target=/app nginx:latest
+
+or
+
+docker run --rm -dit --name (name of continer) -p 8100:80 -v (volume name):/app nginx:latest
+
+-------
+
+docker images
+
+docker rmi <images ID>
+
+docker tag
+
+docker tag <image id> <name : tagname>
+
+// creating a new network form docker to test ansible with out servers
+
+docker network create --subnet 172.20.0.0/16 --gateway 172.20.0254 <name_of_network>
+
+# docker run --rm -dit --name controller --hostname controller --network <name_of_network> <docker repo>
+# docker run --rm -dit --name web1 --hostname web1 -p 8000:80 --network <name_of_network> <docker repo>
+# docker run --rm -dit --name web2 --hostname web2 -p 8001:80 --network <name_of_network> <docker repo>
+# docker run --rm -dit --name web1 --hostname web3 -p 8002:80 --network <name_of_network> <docker repo>
+# docker run --rm -dit --name app1 --hostname app1  --network <name_of_network> <docker repo>
+# docker run --rm -dit --name app2 --hostname app2  --network <name_of_network> <docker repo>
+# docker run --rm -dit --name app3 --hostname app3  --network <name_of_network> <docker repo>
+# docker run --rm -dit --name db1 --hostname db1 --network <name_of_network> <docker repo>
+# docker run --rm -dit --name db2 --hostname db2 --network <name_of_network> <docker repo>
+# docker run --rm -dit --name db3 --hostname db3 --network <name_of_network> <docker repo>
+
+create new image use this  code after creating nessery file like Dockerfile (D caps must) and From <docker image like nginx:latest> and file to replace
+
+
+
+docker build -t <repo profile name/repo file name>:tag like v1 .
+
+
+docker login (to login to hud.docker site)
+
+
+https://docs.docker.com/engine/referene/builder
+
+curl -L https://github.com/docker/compose/releases/download/v1.25.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
