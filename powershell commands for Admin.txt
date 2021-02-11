@@ -1,0 +1,49 @@
+
+> Get-PSDrive          //To list drives with the file system
+> Get-PSDrive –PSProvider FileSystem
+
+> Get-ChildItem        //To list files in another directory
+> Get-ChildItem <path-of-another-directory>
+
+> Set-Location <path>
+
+// To create directory
+> New-Item –ItemType Directory –Path <path> -Name <name-of-the-directory>
+// To create file
+> New-Item –ItemType File –Path <path> –Name <filename> –Value “value in your file”
+// To edit content later
+Set-Content –Path <path-of-file> –Value “your new value”
+
+> Get-Item file-name      // To view file information
+> Get-Content file-name		// To view the content of the file
+> Get-Content file-name | Out-GridView   // To view it in an external window
+> Get-Content file-name | Out-Printer	 // To print it
+
+> Rename-Item –Path path –NewName new-name   // Renaming a file or folder
+
+> Copy-Item path-with-file-name –Destination destination-path  // To copy
+> Move-Item –Path path-with-file-name –Destination destination-path  // To move
+> Move-Item –Path path-with-file-name –Destination destination-path-with-new-name // To move and rename
+
+> Remove-Item file-or-directory-name      // Removing a file or directory
+
+> Get-Command        // Getting all the commands 
+> Get-Command –CommandType function, alias, or cmdlet   //To get command of specific type
+> Get-Command *search-value  To search for a command
+
+> Get-Help command-name   // Getting help for a command 
+> Get-Help command-name -Example    // To get examples
+
+------Getting the list of processes and services 
+> Get-Process   // For processes
+> Get-Service   // For services
+
+> Stop-Process –Name name-of-process	// To stop a process 
+> Stop-Process –Id id-of-process –Confirm -PassThru		// To stop a particular instance of the process and confirm
+
+> Get-WindowsDriver –Online –All 	// Get the list of Windows drivers​
+
+> Export-WindowsDriver -Online -Destination path-for-backup 	// Taking backup of drivers
+
+----- Scan for malware
+> Start-MpScan –ScanType QuickScan/FullScan –ScanPath directory-path-to-be-scanned
