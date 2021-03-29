@@ -1,0 +1,15 @@
+#!/bin/bash
+#################---RG & vNET---###########
+az group create -l eastus -n <RG Name>
+az network vnet create -g <RG Name> -n <Vnet Name> --address-prefix 10.1.0.0/16 \
+--subnet-name <subnet Name> --subnet-prefix 10.1.1.0/24 -l eastus
+#################---NSG_&_Rule_AvailibilitySet---###########
+az network nsg create -g <RG Name> -n <NSG Name>
+az network nsg rule create -g <RG Name> --nsg-name <NSG Name> -n <NSG Rule Name> --priority 100 \
+--source-address-prefixes '*' --source-port-ranges '*'     --destination-address-prefixes '*' \
+--destination-port-ranges '*' --access Allow     --protocol Tcp --description "Allow from specific IP address ranges on 80 and 8080."
+az vm availability-set create --name EAST-AVSET1 -g <RG Name> --location eastus
+#################---VIRTUALMACHINES---###########
+az vm create --resource-group <RG Name> --name <VM Name> --image UbuntuLTS --vnet-name <Vnet Name> \
+--subnet <subnet Name> --admin-username testuser --admin-password "India@123456" --size Standard_B1ms \
+--availability-set EAST-AVSET1 --nsg <NSG Name> 
